@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Gift Unasked — A Philosophical Dialogue Between Dust and Doctrine</title>
+<meta name="description" content="A philosophical dialogue between a Poet and a Theologian on existence, God, free will, suffering and the question: why did You make me at all? By David Oyetayo.">
+<meta name="author" content="David Oyetayo">
+<meta name="theme-color" content="#080807">
+<!-- Social preview. After deploying, replace the two URLs with your real, absolute address. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Gift Unasked">
+<meta property="og:description" content="A Philosophical Dialogue Between Dust and Doctrine — by David Oyetayo.">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/assets/images/og-preview.jpg">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Gift Unasked">
+<meta name="twitter:description" content="Why did You make me at all? A philosophical dialogue between dust and doctrine.">
+<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/assets/images/og-preview.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080807'/%3E%3Cellipse cx='16' cy='13' rx='3' ry='5' fill='%23B99A58'/%3E%3Crect x='14' y='18' width='4' height='9' fill='%23D8C7A0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<noscript><p style="padding:2rem;color:#EEE8D8;font-family:Georgia,serif">This dialogue needs JavaScript to unfold. “The Gift Unasked” — David Oyetayo.</p></noscript>
+
+<!-- character portraits -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="skyP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1018"/><stop offset="1" stop-color="#27313d"/></linearGradient>
+    <radialGradient id="glowT" cx=".72" cy=".62" r=".7"><stop offset="0" stop-color="#B99A58" stop-opacity=".55"/><stop offset="1" stop-color="#B99A58" stop-opacity="0"/></radialGradient>
+  </defs>
+  <symbol id="av-poet" viewBox="0 0 64 64">
+    <rect width="64" height="64" fill="url(#skyP)"/>
+    <g fill="#EEE8D8"><circle cx="10" cy="9" r=".8"/><circle cx="22" cy="16" r=".6"/><circle cx="46" cy="8" r=".9"/><circle cx="54" cy="20" r=".6"/><circle cx="36" cy="12" r=".5"/><circle cx="14" cy="26" r=".5"/><circle cx="52" cy="34" r=".5"/><circle cx="28" cy="5" r=".5"/></g>
+    <path d="M0 54c14-4 30-5 64 0v10H0z" fill="#0a0c10"/>
+    <circle cx="32" cy="38" r="3" fill="#06070a"/><path d="M29.2 42h5.6l1.6 13h-8.8z" fill="#06070a"/>
+  </symbol>
+  <symbol id="av-theo" viewBox="0 0 64 64">
+    <rect width="64" height="64" fill="#17120c"/><rect width="64" height="64" fill="url(#glowT)"/>
+    <rect x="6" y="50" width="30" height="5" fill="#3a2d1c"/><rect x="9" y="46" width="24" height="4" fill="#4a3a24"/>
+    <path d="M14 64c0-17 6-26 15-26s15 9 15 26z" fill="#0a0806"/>
+    <circle cx="29" cy="28" r="7" fill="#0a0806"/><path d="M23 30c1 9 11 9 12 0z" fill="#2a2216"/>
+    <rect x="47" y="40" width="3.4" height="14" fill="#D8C7A0"/><path d="M48.7 31c3 3.4 2.4 7-0 8.4-2.4-1.4-3-5 0-8.4z" fill="#B99A58"/>
+  </symbol>
+</svg>
+
+<!-- OPENING -->
+<section id="opening" class="screen active" aria-label="Opening">
+  <canvas id="stars-open" aria-hidden="true"></canvas>
+  <div class="open-inner">
+    <h1 class="o o1">THE GIFT UNASKED</h1>
+    <p class="o o2">A Philosophical Dialogue Between Dust and Doctrine</p>
+    <p class="o o3">David Oyetayo</p>
+    <p class="o o4">“Before you begin, decide nothing.”</p>
+    <button id="enter" class="o o5 btn-enter" type="button">ENTER THE QUESTION</button>
+    <p id="egg1" class="egg">Perhaps silence is already an answer.</p>
+  </div>
+</section>
+
+<!-- STAGE -->
+<main id="stage" class="screen" aria-label="The dialogue" aria-hidden="true">
+  <canvas id="stars-stage" aria-hidden="true"></canvas>
+  <div class="bg" id="bg"><div class="bgl" id="bgA"></div><div class="bgl" id="bgB"></div></div>
+  <div class="veil"></div><div class="grain"></div>
+
+  <header class="hud">
+    <span class="brand">THE GIFT UNASKED</span>
+    <span class="chlabel" id="chlabel" aria-live="polite"></span>
+    <div class="hud-r">
+      <div class="rail" id="rail" aria-hidden="true"></div>
+      <button class="tbtn" id="menubtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu">Chapters</button>
+    </div>
+  </header>
+  <nav id="menu" class="pop menu" aria-label="Chapters" hidden></nav>
+
+  <div class="scroller" id="scroller"><article id="turn" class="turnwrap" tabindex="-1"></article></div>
+
+  <div id="solo" class="solo" aria-hidden="true"></div>
+  <p id="hint" class="hint" aria-hidden="true">tap, or press → to continue</p>
+
+  <div id="card" class="card" aria-hidden="true"><p class="card-n" id="card-n"></p><h2 class="card-t" id="card-t"></h2></div>
+
+  <div id="ask" class="ask" role="dialog" aria-modal="false" aria-labelledby="ask-h" hidden>
+    <p class="ask-q" id="ask-q"></p>
+    <h2 id="ask-h" class="ask-h">YOU MAY ANSWER BEFORE THEY DO.</h2>
+    <div class="ask-b">
+      <button type="button" class="pick" data-who="poet"><span class="av"><svg viewBox="0 0 64 64"><use href="#av-poet"/></svg></span>THE POET</button>
+      <button type="button" class="pick" data-who="theo"><span class="av"><svg viewBox="0 0 64 64"><use href="#av-theo"/></svg></span>THE THEOLOGIAN</button>
+    </div>
+    <p class="ask-n">Your answer changes nothing in the poem. Only who steps into the light first.</p>
+  </div>
+
+  <div class="pop voicebox" id="voicebox" role="group" aria-label="Narration voices" hidden>
+    <label class="sw"><input type="checkbox" id="narrToggle"> Narration</label>
+    <label>Poet voice <select id="voicePoet"></select></label>
+    <label>Theologian voice <select id="voiceTheo"></select></label>
+  </div>
+
+  <div class="bar" id="bar"><div class="bar-fill" id="barfill"></div></div>
+  <nav class="controls" aria-label="Reading controls">
+    <button class="ib" id="prev" type="button" aria-label="Previous exchange"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="ib needs-speech" id="play" type="button" aria-label="Play narration" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="i-play"><path class="f" d="M8 5v14l11-7z"/></svg>
+      <svg viewBox="0 0 24 24" class="i-pause" hidden><path d="M9 5v14M15 5v14"/></svg>
+    </button>
+    <button class="ib needs-speech" id="stop" type="button" aria-label="Stop narration"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/></svg></button>
+    <button class="ib" id="next" type="button" aria-label="Next exchange"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    <span class="sep" aria-hidden="true"></span>
+    <button class="ib txt" id="size" type="button" aria-label="Text size: medium">Aa</button>
+    <button class="ib" id="amb" type="button" aria-label="Ambient sound" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0"/></svg></button>
+    <button class="ib" id="mute" type="button" aria-label="Mute all sound" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="m-on" d="M16.5 8.5a5 5 0 010 7"/><path class="m-off" d="M17 9l4 6M21 9l-4 6" hidden/></svg></button>
+    <button class="ib txt needs-speech" id="voicebtn" type="button" aria-label="Voice settings" aria-haspopup="true" aria-expanded="false" aria-controls="voicebox">Voice</button>
+  </nav>
+</main>
+
+<!-- REFERENCE PANEL -->
+<aside id="refpanel" class="refpanel" role="dialog" aria-modal="false" aria-labelledby="rp-title" aria-hidden="true">
+  <button class="rp-close" type="button" aria-label="Close reference">×</button>
+  <p class="rp-k">REFERENCE</p>
+  <h2 id="rp-title"></h2>
+  <p class="rp-note" id="rp-disputed" hidden></p>
+  <h3>What the text says</h3><p id="rp-says"></p>
+  <h3>Context</h3><p id="rp-context"></p>
+  <h3>What the characters argue it means</h3><p id="rp-argue"></p>
+  <h3>Why it matters to the dialogue</h3><p id="rp-why"></p>
+  <p class="rp-foot">Short paraphrase, not a translation. Read the passage in your own Bible.</p>
+</aside>
+
+<!-- WHO WON -->
+<section id="verdict" class="screen" aria-label="Who won?" aria-hidden="true">
+  <div class="v-inner">
+    <h2 class="vstep v-big">WHO WON?</h2>
+    <p class="vstep">“Perhaps you misunderstood the question.”</p>
+    <p class="vstep"><span class="vp">THE POET</span> asked whether existence can be a gift without consent.</p>
+    <p class="vstep">The <span class="vt">THEOLOGIAN</span> answered why existence might still be meaningful.</p>
+    <p class="vstep">Neither answer completely destroys the other.</p>
+    <div id="vchoices" class="vchoices">
+      <h3 class="v-big v-sm">WHAT DO YOU THINK?</h3>
+      <div class="vcs">
+        <button class="vc" type="button" aria-pressed="false">EXISTENCE IS A GIFT</button>
+        <button class="vc" type="button" aria-pressed="false">EXISTENCE IS A BURDEN</button>
+        <button class="vc" type="button" aria-pressed="false">THE QUESTION IS UNANSWERABLE</button>
+      </div>
+      <div id="vafter" class="vafter" hidden><p>Nothing is recorded. The answer stays with you.</p><button id="vgo" class="btn-enter" type="button">CONTINUE</button></div>
+      <button id="vskip" class="linkbtn" type="button">continue without answering</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section id="finale" class="screen" aria-label="Final scene" aria-hidden="true">
+  <button id="candle" class="candle" type="button" aria-label="The candle. Activate to make the flame brighten.">
+    <span class="halo"></span><span class="flame"></span><span class="wick"></span><span class="wax"></span>
+  </button>
+  <div class="f-lines">
+    <p class="fl">“I was here.”</p>
+    <p class="fl">“I felt the weight of existence.”</p>
+    <p class="fl">“I questioned the hand that gave it.”</p>
+    <p class="fl fl-last">“And still,<br><br>for one brief and impossible moment,<br><br>I chose what to do with the light.”</p>
+  </div>
+  <div id="fend" class="fend" hidden>
+    <h2>THE GIFT UNASKED</h2>
+    <p class="f-sub">A Philosophical Dialogue Between Dust and Doctrine</p>
+    <p class="f-au">David Oyetayo</p>
+    <div class="f-b"><button id="again" class="btn-enter" type="button">READ AGAIN</button><button id="share" class="btn-enter" type="button">SHARE THE QUESTION</button></div>
+    <p class="still">Still asking?</p>
+  </div>
+</section>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/dialogue.js"></script>
+<script src="js/narration.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
